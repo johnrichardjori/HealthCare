@@ -151,18 +151,6 @@ select:focus {
   border-bottom-color: #fff;
 }
 
-body {
-  margin: 0px;
-  padding: 0px;
-  height: 100vh;
-  box-sizing: border-box;
-  background-image: url("./assets/doctor.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-  font-family: Arial, sans-serif;
-}
-
 .checkboxes {
   margin-top: 20px;
   font-size: 14px;
