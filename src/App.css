@@ -1,38 +1,273 @@
-.App {
-  text-align: center;
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: url("./assets/doctor.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  width: 37vw;
+  height: 61vh;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.app .circle {
+  height: 31vh;
+  width: 15vw;
+  border-radius: 50%;
+  background-image: linear-gradient(#3c3a6d, #4a2b5d);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  align-items: center;
+  transform: rotate(90deg);
+  color: #fff;
+}
+
+.inner-box {
+  height: 58vh;
+  width: 17vw;
+  background-color: #f4e6da84;
+  backdrop-filter: 5px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 0;
+  left: 0px;
+  position: absolute;
+  margin: 10px;
+  border-radius: 20px;
+  display: block !important;
+}
+
+.icons {
+  position: absolute;
+  padding: 10px;
+  bottom: 10px;
+}
+
+.icon-list {
+  margin: 10px;
+}
+
+.box-bottom {
+  width: 37vw;
+  height: 24vh;
+  background-color: #f4e6da;
+  border-radius: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.box-bottom h3 {
+  padding: 10px;
+  margin: 0px;
+}
+
+.box-bottom p {
+  margin-left: 10px;
+}
+
+.right-box {
+  height: 86vh;
+  width: 33vw;
+  background-color: #5e6e8bb1;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.Box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-panel {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-panel h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+input,
+textarea,
+select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder,
+select {
+  color: #ddd;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-bottom-color: #fff;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: url("./assets/doctor.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  font-family: Arial, sans-serif;
+}
+
+.checkboxes {
+  margin-top: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.checkboxes label {
+  display: block;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.checkboxes a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  background: #f4eae4;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 14px 20px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #e5dad4;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 8px;
+  }
+
+  .box-bottom {
+    width: 51vw;
+    height: 24vh;
+  }
+
+  .right-box {
+    margin-top: 10px;
+    height: 52vh;
+    width: 48vw;
+  }
+
+  input,
+  textarea,
+  select {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 2px;
+    font-size: 8px;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+
+  .Box {
+    display: block;
+  }
+
+  .checkboxes label {
+    display: block;
+    margin-bottom: 5px;
+    line-height: 1.4;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app {
+    width: 52vw;
+    height: 31vh;
+  }
+  .form-grid {
+    gap: 13px;
+  }
+
+  .app .circle {
+    height: 13vh;
+    width: 24vw;
+    border-radius: 50%;
+  }
+
+  .inner-box {
+    height: 29vh;
+    width: 23vw;
+  }
+  .checkboxes {
+    margin-top: 5px;
+    font-size: 8px;
+    color: white;
+  }
+  .submit-btn {
+    margin-top: 2px;
+    background: #f4eae4;
+    color: #000;
+    font-size: 8px;
+    border: none;
+    padding: 2px 2px;
   }
 }
